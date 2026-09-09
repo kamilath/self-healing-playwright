@@ -17,36 +17,7 @@ The framework automatically tries alternative locators when the primary locator 
 * Positive and negative test scenarios
 * Locator health tracking
 
-## 🏗 Project Structure
 
-```text
-self-healing-playwright/
-│
-├── tests/
-│   └── login.spec.ts
-│
-├── pages/
-│   └── LoginPage.ts
-│
-├── healing/
-│   └── healing-history.json
-│
-├── utils/
-│   ├── LocatorManager.ts
-│   ├── TestResultReporter.ts
-│   ├── HealingDashboard.ts
-│   └── test-results.json
-│
-├── reports/
-│   └── healing-dashboard.html
-│
-├── test-data/
-│
-├── playwright.config.ts
-├── tsconfig.json
-├── package.json
-└── README.md
-```
 
 ## 🔧 How Self-Healing Works
 
@@ -86,24 +57,6 @@ The successful fallback locator is stored in:
 healing/healing-history.json
 ```
 
-## 🧪 Test Cases
-
-The project currently contains 12 login test cases:
-
-| Test Case | Description                              |
-| --------- | ---------------------------------------- |
-| TC001     | Verify login with valid credentials      |
-| TC002     | Verify login with invalid username       |
-| TC003     | Verify login with invalid password       |
-| TC004     | Verify login with both fields empty      |
-| TC005     | Verify login with empty username         |
-| TC006     | Verify login with empty password         |
-| TC007     | Verify username field is displayed       |
-| TC008     | Verify password field is displayed       |
-| TC009     | Verify login button is displayed         |
-| TC010     | Verify password field is masked          |
-| TC011     | Verify username locator self-healing     |
-| TC012     | Verify login button locator self-healing |
 
 ## 📊 Custom QA Dashboard
 
