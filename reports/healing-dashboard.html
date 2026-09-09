@@ -1,0 +1,1802 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>QA Automation Dashboard</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #1f2937;
+}
+
+.header {
+  background: #111827;
+  color: white;
+  padding: 25px 40px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header p {
+  margin: 7px 0 0;
+  color: #9ca3af;
+}
+
+.container {
+  padding: 30px 40px;
+}
+
+.section-title {
+  margin: 30px 0 15px;
+  font-size: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(180px, 1fr));
+
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 12px rgba(0,0,0,0.06);
+}
+
+.card-title {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.card-value {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.card-info {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 20px;
+}
+
+.panel {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 12px rgba(0,0,0,0.06);
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 13px;
+  background: #f3f4f6;
+  font-size: 13px;
+}
+
+td {
+  padding: 13px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 13px;
+}
+
+.badge {
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.passed {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.failed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.skipped {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.failed-locator {
+  color: #dc2626;
+}
+
+.working-locator {
+  color: #16a34a;
+}
+
+.health-item {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px 0;
+
+  border-bottom:
+    1px solid #e5e7eb;
+}
+
+.health-icon {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+
+  background: #dcfce7;
+  color: #15803d;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+}
+
+.health-name {
+  font-weight: bold;
+}
+
+.health-text {
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.empty {
+  color: #9ca3af;
+  padding: 20px 0;
+}
+
+.footer {
+  margin-top: 30px;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+@media(max-width: 900px) {
+
+  .cards {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+  <h1>🛡 QA Automation Dashboard</h1>
+
+  <p>
+    Self-Healing Playwright Automation Framework
+  </p>
+
+</div>
+
+
+<div class="container">
+
+
+<h2 class="section-title">
+Test Execution
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+  <div class="card-title">
+    Total Tests
+  </div>
+
+  <div class="card-value">
+    13
+  </div>
+
+</div>
+
+
+<div class="card">
+
+  <div class="card-title">
+    Passed
+  </div>
+
+  <div class="card-value">
+    13
+  </div>
+
+</div>
+
+
+<div class="card">
+
+  <div class="card-title">
+    Failed
+  </div>
+
+  <div class="card-value">
+    0
+  </div>
+
+</div>
+
+
+<div class="card">
+
+  <div class="card-title">
+    Skipped
+  </div>
+
+  <div class="card-value">
+    0
+  </div>
+
+</div>
+
+
+</div>
+
+
+<div class="cards" style="margin-top:18px">
+
+
+<div class="card">
+
+  <div class="card-title">
+    Total Healing Attempts
+  </div>
+
+  <div class="card-value">
+    41
+  </div>
+
+</div>
+
+
+<div class="card">
+
+  <div class="card-title">
+    Successfully Healed
+  </div>
+
+  <div class="card-value">
+    41
+  </div>
+
+</div>
+
+
+<div class="card">
+
+  <div class="card-title">
+    Failed Healing
+  </div>
+
+  <div class="card-value">
+    0
+  </div>
+
+  <div class="card-info">
+    Failure tracking coming next
+  </div>
+
+</div>
+
+
+<div class="card">
+
+  <div class="card-title">
+    Healing Success Rate
+  </div>
+
+  <div class="card-value">
+    100%
+  </div>
+
+</div>
+
+
+</div>
+
+
+<h2 class="section-title">
+Execution Overview
+</h2>
+
+
+<div class="grid">
+
+
+<div class="panel">
+
+<h2>Test Results</h2>
+
+
+<table>
+
+<tr>
+  <th>Test</th>
+  <th>Status</th>
+  <th>Duration</th>
+</tr>
+
+
+        <tr>
+          <td>healing report</td>
+          <td>
+            <span class="badge passed">
+              PASSED
+            </span>
+          </td>
+          <td>6 ms</td>
+        </tr>
+      
+        <tr>
+          <td>TC001 - Verify login with valid credentials</td>
+          <td>
+            <span class="badge passed">
+              PASSED
+            </span>
+          </td>
+          <td>10971 ms</td>
+        </tr>
+      
+        <tr>
+          <td>TC002 - Verify login with invalid username</td>
+          <td>
+            <span class="badge passed">
+              PASSED
+            </span>
+          </td>
+          <td>11989 ms</td>
+        </tr>
+      
+        <tr>
+          <td>TC003 - Verify login with invalid password</td>
+          <td>
+            <span class="badge passed">
+              PASSED
+            </span>
+          </td>
+          <td>11154 ms</td>
+        </tr>
+      
+        <tr>
+          <td>TC004 - Verify login with both fields empty</td>
+          <td>
+            <span class="badge passed">
+              PASSED
+            </span>
+          </td>
+          <td>5042 ms</td>
+        </tr>
+      
+        <tr>
+          <td>TC005 - Verify login with empty username</td>
+          <td>
+            <span class="badge passed">
+              PASSED
+            </span>
+          </td>
+          <td>7190 ms</td>
+        </tr>
+      
+        <tr>
+          <td>TC006 - Verify login with empty password</td>
+          <td>
+            <span class="badge passed">
+              PASSED
+            </span>
+          </td>
+          <td>6953 ms</td>
+        </tr>
+      
+        <tr>
+          <td>TC007 - Verify username field is displayed</td>
+          <td>
+            <span class="badge passed">
+              PASSED
+            </span>
+          </td>
+          <td>3323 ms</td>
+        </tr>
+      
+        <tr>
+          <td>TC008 - Verify password field is displayed</td>
+          <td>
+            <span class="badge passed">
+              PASSED
+            </span>
+          </td>
+          <td>3438 ms</td>
+        </tr>
+      
+        <tr>
+          <td>TC009 - Verify login button is displayed</td>
+          <td>
+            <span class="badge passed">
+              PASSED
+            </span>
+          </td>
+          <td>3406 ms</td>
+        </tr>
+      
+        <tr>
+          <td>TC010 - Verify password field is masked</td>
+          <td>
+            <span class="badge passed">
+              PASSED
+            </span>
+          </td>
+          <td>3701 ms</td>
+        </tr>
+      
+        <tr>
+          <td>TC011 - Verify username locator self-healing</td>
+          <td>
+            <span class="badge passed">
+              PASSED
+            </span>
+          </td>
+          <td>4957 ms</td>
+        </tr>
+      
+        <tr>
+          <td>TC012 - Verify login button locator self-healing</td>
+          <td>
+            <span class="badge passed">
+              PASSED
+            </span>
+          </td>
+          <td>10194 ms</td>
+        </tr>
+      
+
+</table>
+
+
+</div>
+
+
+<div class="panel">
+
+<h2>Locator Health</h2>
+
+
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Username
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Password
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Username
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Password
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Username
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Password
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Username
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Password
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Username
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Password
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Username
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Password
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Password
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Username
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Username
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Password
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Username
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Password
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Username
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Password
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Password
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Username
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Username
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Username
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Password
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+        <div class="health-item">
+          <div class="health-icon">✓</div>
+
+          <div>
+            <div class="health-name">
+              Login Button
+            </div>
+
+            <div class="health-text">
+              Locator successfully recovered
+            </div>
+          </div>
+        </div>
+      
+
+</div>
+
+
+</div>
+
+
+<h2 class="section-title">
+Recent Healing Events
+</h2>
+
+
+<div class="panel">
+
+
+<table>
+
+<tr>
+  <th>Element</th>
+  <th>Failed Locator</th>
+  <th>Working Locator</th>
+  <th>Status</th>
+  <th>Time</th>
+</tr>
+
+
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:33:18 am</td>
+        </tr>
+      
+        <tr>
+          <td>Password</td>
+          <td class="failed-locator">
+            input[id="password"]
+          </td>
+          <td class="working-locator">
+            input[name="password"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:33:16 am</td>
+        </tr>
+      
+        <tr>
+          <td>Username</td>
+          <td class="failed-locator">
+            input[id="wrong-username"]
+          </td>
+          <td class="working-locator">
+            input[name="username"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:33:13 am</td>
+        </tr>
+      
+        <tr>
+          <td>Username</td>
+          <td class="failed-locator">
+            input[id="wrong-username"]
+          </td>
+          <td class="working-locator">
+            input[name="username"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:33:09 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:32:50 am</td>
+        </tr>
+      
+        <tr>
+          <td>Username</td>
+          <td class="failed-locator">
+            input[id="wrong-username"]
+          </td>
+          <td class="working-locator">
+            input[name="username"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:32:48 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:32:43 am</td>
+        </tr>
+      
+        <tr>
+          <td>Password</td>
+          <td class="failed-locator">
+            input[id="password"]
+          </td>
+          <td class="working-locator">
+            input[name="password"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:32:41 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:32:36 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:32:28 am</td>
+        </tr>
+      
+        <tr>
+          <td>Password</td>
+          <td class="failed-locator">
+            input[id="password"]
+          </td>
+          <td class="working-locator">
+            input[name="password"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:32:26 am</td>
+        </tr>
+      
+        <tr>
+          <td>Username</td>
+          <td class="failed-locator">
+            input[id="wrong-username"]
+          </td>
+          <td class="working-locator">
+            input[name="username"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:32:24 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:32:18 am</td>
+        </tr>
+      
+        <tr>
+          <td>Password</td>
+          <td class="failed-locator">
+            input[id="password"]
+          </td>
+          <td class="working-locator">
+            input[name="password"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:32:16 am</td>
+        </tr>
+      
+        <tr>
+          <td>Username</td>
+          <td class="failed-locator">
+            input[id="wrong-username"]
+          </td>
+          <td class="working-locator">
+            input[name="username"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:32:13 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:32:06 am</td>
+        </tr>
+      
+        <tr>
+          <td>Password</td>
+          <td class="failed-locator">
+            input[id="password"]
+          </td>
+          <td class="working-locator">
+            input[name="password"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:32:04 am</td>
+        </tr>
+      
+        <tr>
+          <td>Username</td>
+          <td class="failed-locator">
+            input[id="wrong-username"]
+          </td>
+          <td class="working-locator">
+            input[name="username"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:32:02 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:30:14 am</td>
+        </tr>
+      
+        <tr>
+          <td>Username</td>
+          <td class="failed-locator">
+            input[id="wrong-username"]
+          </td>
+          <td class="working-locator">
+            input[name="username"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:30:12 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:30:07 am</td>
+        </tr>
+      
+        <tr>
+          <td>Password</td>
+          <td class="failed-locator">
+            input[id="password"]
+          </td>
+          <td class="working-locator">
+            input[name="password"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:30:05 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:30:00 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:29:53 am</td>
+        </tr>
+      
+        <tr>
+          <td>Password</td>
+          <td class="failed-locator">
+            input[id="password"]
+          </td>
+          <td class="working-locator">
+            input[name="password"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:29:51 am</td>
+        </tr>
+      
+        <tr>
+          <td>Username</td>
+          <td class="failed-locator">
+            input[id="wrong-username"]
+          </td>
+          <td class="working-locator">
+            input[name="username"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:29:49 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:29:42 am</td>
+        </tr>
+      
+        <tr>
+          <td>Password</td>
+          <td class="failed-locator">
+            input[id="password"]
+          </td>
+          <td class="working-locator">
+            input[name="password"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:29:40 am</td>
+        </tr>
+      
+        <tr>
+          <td>Username</td>
+          <td class="failed-locator">
+            input[id="wrong-username"]
+          </td>
+          <td class="working-locator">
+            input[name="username"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:29:38 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:29:32 am</td>
+        </tr>
+      
+        <tr>
+          <td>Password</td>
+          <td class="failed-locator">
+            input[id="password"]
+          </td>
+          <td class="working-locator">
+            input[name="password"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:29:30 am</td>
+        </tr>
+      
+        <tr>
+          <td>Username</td>
+          <td class="failed-locator">
+            input[id="wrong-username"]
+          </td>
+          <td class="working-locator">
+            input[name="username"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:29:28 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:27:52 am</td>
+        </tr>
+      
+        <tr>
+          <td>Password</td>
+          <td class="failed-locator">
+            input[id="password"]
+          </td>
+          <td class="working-locator">
+            input[name="password"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:27:50 am</td>
+        </tr>
+      
+        <tr>
+          <td>Username</td>
+          <td class="failed-locator">
+            input[id="wrong-username"]
+          </td>
+          <td class="working-locator">
+            input[name="username"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:27:48 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:25:37 am</td>
+        </tr>
+      
+        <tr>
+          <td>Password</td>
+          <td class="failed-locator">
+            input[id="password"]
+          </td>
+          <td class="working-locator">
+            input[name="password"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:25:34 am</td>
+        </tr>
+      
+        <tr>
+          <td>Username</td>
+          <td class="failed-locator">
+            input[id="wrong-username"]
+          </td>
+          <td class="working-locator">
+            input[name="username"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:25:32 am</td>
+        </tr>
+      
+        <tr>
+          <td>Login Button</td>
+          <td class="failed-locator">
+            button[id="login-button"]
+          </td>
+          <td class="working-locator">
+            button[type="submit"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:16:01 am</td>
+        </tr>
+      
+        <tr>
+          <td>Password</td>
+          <td class="failed-locator">
+            input[id="password"]
+          </td>
+          <td class="working-locator">
+            input[name="password"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:15:59 am</td>
+        </tr>
+      
+        <tr>
+          <td>Username</td>
+          <td class="failed-locator">
+            input[id="wrong-username"]
+          </td>
+          <td class="working-locator">
+            input[name="username"]
+          </td>
+          <td>
+            <span class="badge passed">
+              HEALED
+            </span>
+          </td>
+          <td>10/9/2026, 12:15:57 am</td>
+        </tr>
+      
+
+</table>
+
+
+</div>
+
+
+<div class="footer">
+
+Total execution duration:
+<strong>82.32s</strong>
+
+</div>
+
+
+</div>
+
+</body>
+
+</html>

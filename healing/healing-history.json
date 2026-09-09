@@ -1,0 +1,248 @@
+[
+  {
+    "element": "Username",
+    "failedLocator": "input[id=\"wrong-username\"]",
+    "workingLocator": "input[name=\"username\"]",
+    "time": "2026-09-09T18:45:57.829Z"
+  },
+  {
+    "element": "Password",
+    "failedLocator": "input[id=\"password\"]",
+    "workingLocator": "input[name=\"password\"]",
+    "time": "2026-09-09T18:45:59.874Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T18:46:01.952Z"
+  },
+  {
+    "element": "Username",
+    "failedLocator": "input[id=\"wrong-username\"]",
+    "workingLocator": "input[name=\"username\"]",
+    "time": "2026-09-09T18:55:32.554Z"
+  },
+  {
+    "element": "Password",
+    "failedLocator": "input[id=\"password\"]",
+    "workingLocator": "input[name=\"password\"]",
+    "time": "2026-09-09T18:55:34.590Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T18:55:37.862Z"
+  },
+  {
+    "element": "Username",
+    "failedLocator": "input[id=\"wrong-username\"]",
+    "workingLocator": "input[name=\"username\"]",
+    "time": "2026-09-09T18:57:48.090Z"
+  },
+  {
+    "element": "Password",
+    "failedLocator": "input[id=\"password\"]",
+    "workingLocator": "input[name=\"password\"]",
+    "time": "2026-09-09T18:57:50.173Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T18:57:52.236Z"
+  },
+  {
+    "element": "Username",
+    "failedLocator": "input[id=\"wrong-username\"]",
+    "workingLocator": "input[name=\"username\"]",
+    "time": "2026-09-09T18:59:28.167Z"
+  },
+  {
+    "element": "Password",
+    "failedLocator": "input[id=\"password\"]",
+    "workingLocator": "input[name=\"password\"]",
+    "time": "2026-09-09T18:59:30.208Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T18:59:32.264Z"
+  },
+  {
+    "element": "Username",
+    "failedLocator": "input[id=\"wrong-username\"]",
+    "workingLocator": "input[name=\"username\"]",
+    "time": "2026-09-09T18:59:38.539Z"
+  },
+  {
+    "element": "Password",
+    "failedLocator": "input[id=\"password\"]",
+    "workingLocator": "input[name=\"password\"]",
+    "time": "2026-09-09T18:59:40.569Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T18:59:42.610Z"
+  },
+  {
+    "element": "Username",
+    "failedLocator": "input[id=\"wrong-username\"]",
+    "workingLocator": "input[name=\"username\"]",
+    "time": "2026-09-09T18:59:49.373Z"
+  },
+  {
+    "element": "Password",
+    "failedLocator": "input[id=\"password\"]",
+    "workingLocator": "input[name=\"password\"]",
+    "time": "2026-09-09T18:59:51.410Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T18:59:53.461Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T19:00:00.608Z"
+  },
+  {
+    "element": "Password",
+    "failedLocator": "input[id=\"password\"]",
+    "workingLocator": "input[name=\"password\"]",
+    "time": "2026-09-09T19:00:05.517Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T19:00:07.563Z"
+  },
+  {
+    "element": "Username",
+    "failedLocator": "input[id=\"wrong-username\"]",
+    "workingLocator": "input[name=\"username\"]",
+    "time": "2026-09-09T19:00:12.511Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T19:00:14.577Z"
+  },
+  {
+    "element": "Username",
+    "failedLocator": "input[id=\"wrong-username\"]",
+    "workingLocator": "input[name=\"username\"]",
+    "time": "2026-09-09T19:02:02.326Z"
+  },
+  {
+    "element": "Password",
+    "failedLocator": "input[id=\"password\"]",
+    "workingLocator": "input[name=\"password\"]",
+    "time": "2026-09-09T19:02:04.369Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T19:02:06.427Z"
+  },
+  {
+    "element": "Username",
+    "failedLocator": "input[id=\"wrong-username\"]",
+    "workingLocator": "input[name=\"username\"]",
+    "time": "2026-09-09T19:02:13.998Z"
+  },
+  {
+    "element": "Password",
+    "failedLocator": "input[id=\"password\"]",
+    "workingLocator": "input[name=\"password\"]",
+    "time": "2026-09-09T19:02:16.038Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T19:02:18.091Z"
+  },
+  {
+    "element": "Username",
+    "failedLocator": "input[id=\"wrong-username\"]",
+    "workingLocator": "input[name=\"username\"]",
+    "time": "2026-09-09T19:02:24.884Z"
+  },
+  {
+    "element": "Password",
+    "failedLocator": "input[id=\"password\"]",
+    "workingLocator": "input[name=\"password\"]",
+    "time": "2026-09-09T19:02:26.927Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T19:02:28.971Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T19:02:36.038Z"
+  },
+  {
+    "element": "Password",
+    "failedLocator": "input[id=\"password\"]",
+    "workingLocator": "input[name=\"password\"]",
+    "time": "2026-09-09T19:02:41.183Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T19:02:43.238Z"
+  },
+  {
+    "element": "Username",
+    "failedLocator": "input[id=\"wrong-username\"]",
+    "workingLocator": "input[name=\"username\"]",
+    "time": "2026-09-09T19:02:48.145Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T19:02:50.207Z"
+  },
+  {
+    "element": "Username",
+    "failedLocator": "input[id=\"wrong-username\"]",
+    "workingLocator": "input[name=\"username\"]",
+    "time": "2026-09-09T19:03:09.100Z"
+  },
+  {
+    "element": "Username",
+    "failedLocator": "input[id=\"wrong-username\"]",
+    "workingLocator": "input[name=\"username\"]",
+    "time": "2026-09-09T19:03:13.993Z"
+  },
+  {
+    "element": "Password",
+    "failedLocator": "input[id=\"password\"]",
+    "workingLocator": "input[name=\"password\"]",
+    "time": "2026-09-09T19:03:16.038Z"
+  },
+  {
+    "element": "Login Button",
+    "failedLocator": "button[id=\"login-button\"]",
+    "workingLocator": "button[type=\"submit\"]",
+    "time": "2026-09-09T19:03:18.087Z"
+  }
+]

@@ -1,0 +1,74 @@
+{
+  "total": 13,
+  "passed": 13,
+  "failed": 0,
+  "skipped": 0,
+  "duration": 82324,
+  "tests": [
+    {
+      "name": "healing report",
+      "status": "passed",
+      "duration": 6
+    },
+    {
+      "name": "TC001 - Verify login with valid credentials",
+      "status": "passed",
+      "duration": 10971
+    },
+    {
+      "name": "TC002 - Verify login with invalid username",
+      "status": "passed",
+      "duration": 11989
+    },
+    {
+      "name": "TC003 - Verify login with invalid password",
+      "status": "passed",
+      "duration": 11154
+    },
+    {
+      "name": "TC004 - Verify login with both fields empty",
+      "status": "passed",
+      "duration": 5042
+    },
+    {
+      "name": "TC005 - Verify login with empty username",
+      "status": "passed",
+      "duration": 7190
+    },
+    {
+      "name": "TC006 - Verify login with empty password",
+      "status": "passed",
+      "duration": 6953
+    },
+    {
+      "name": "TC007 - Verify username field is displayed",
+      "status": "passed",
+      "duration": 3323
+    },
+    {
+      "name": "TC008 - Verify password field is displayed",
+      "status": "passed",
+      "duration": 3438
+    },
+    {
+      "name": "TC009 - Verify login button is displayed",
+      "status": "passed",
+      "duration": 3406
+    },
+    {
+      "name": "TC010 - Verify password field is masked",
+      "status": "passed",
+      "duration": 3701
+    },
+    {
+      "name": "TC011 - Verify username locator self-healing",
+      "status": "passed",
+      "duration": 4957
+    },
+    {
+      "name": "TC012 - Verify login button locator self-healing",
+      "status": "passed",
+      "duration": 10194
+    }
+  ]
+}
